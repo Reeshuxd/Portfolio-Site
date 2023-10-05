@@ -1,0 +1,225 @@
+/* Made by reeshuxd
+(c) @reeshuxd */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #0b2b3c 35%, #0186BF 70%);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 90%;
+    width: 95%;
+    padding-top: 1.2rem;
+    background-color: white;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e2331;
+    box-shadow: 3px 3px 2px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 5%;
+    color: white;
+    animation: slider 1s ease forwards;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes backslider {
+    0% {
+        transform: translateX(100px); /* Start from the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Move to the left */
+        opacity: 1;
+    }
+}
+
+.navbar ul {
+    position: relative;
+    float: right;
+    margin-top: -6vh;
+    animation: backslider 1s ease backwards;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 550;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00b3ff;
+}
+
+@media screen and (max-width: 505px) {
+    .navbar {
+      display: none; 
+    }
+
+    .right img {
+        float: right;
+        height: 100px;
+        width: 100px;
+        margin-top: -16vh;
+        backdrop-filter: blur(5);
+    }
+  }
+
+.right img {
+    display: flex;
+    position: absolute;
+    top: 25%;
+    right: 15%
+}
+
+.titl {
+    font-size: 60px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 15vh;
+    margin-left: 8vh;
+    text-decoration: none;
+    color: #fff;
+}
+
+.hob {
+    color: rgb(0, 249, 249);
+    font-size: 25px;
+    font-weight: 550;
+    position: relative;
+    margin-top: 1vh;
+    margin-left: 8vh;
+}
+
+.btns {
+    position: relative;
+    margin-top: 2%;
+    width: max-content;
+    display: inline-flex;
+    height: 10%;
+    margin-left: 4%;
+    gap: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .titl {
+        font-size:2.3rem;
+    }
+
+    .btns {
+        position: relative;
+        left: 1.5rem;
+        margin-top: 0.8rem;
+    }
+}
+
+.btns a {
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    background: #00b3ff;
+    border: 2px solid #00b3ff;
+    border-radius: 30px;
+    font-size: 17px;
+    color: #0b2b3c;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .4s ease; 
+}
+
+.btns a:hover {
+    box-shadow: 0 0 35px #00b3ff;
+}
+
+.btns a:nth-child(2) {
+    background: transparent;
+    color: #00b3ff;
+}
+
+.icons {
+    position: relative;
+    left: 3.5vw;
+}
+
+
+@media screen and (max-width: 375px) {
+   .icons {
+    left: 9vw;
+   }
+
+   .parent {
+    position: relative;
+    left:-2vw !important;
+   }
+    
+}
+.icons a {
+    float: left;
+    margin: 30px 30px 30px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00b3ff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00b3ff;
+    text-decoration: none;
+    transition: 0.4 ease;
+    word-break: normal;
+}
+
+.icons a:hover {
+    background: #00b3ff;
+    color: #0b2b3c;
+    box-shadow: 0 0 25px #00b3ff;
+}
